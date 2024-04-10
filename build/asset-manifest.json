@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.72ce1bc1.css",
+    "main.js": "/static/js/main.c0fd9f57.js",
+    "static/media/jokes1.png": "/static/media/jokes1.96ec13aaf8c445d61509.png",
+    "static/media/feane2.png": "/static/media/feane2.94990ea20ea3b1e2dd6e.png",
+    "static/media/musera img.png": "/static/media/musera img.c4135308ba7b4a5cb745.png",
+    "static/media/site-bg.jpg": "/static/media/site-bg.54724d703024833ef9c6.jpg",
+    "static/media/jokes2.png": "/static/media/jokes2.ae9b6d5d31d4c061e1a8.png",
+    "static/media/murera2.png": "/static/media/murera2.5333e7b5f9df0959fc49.png",
+    "static/media/landing2.png": "/static/media/landing2.3b691d94b7e83142502e.png",
+    "static/media/services.png": "/static/media/services.8e66d4fbbd95de45b8db.png",
+    "static/media/textutil2.png": "/static/media/textutil2.6c583fdc5a2e29ab02b3.png",
+    "static/media/fiane1.png": "/static/media/fiane1.4bc0dfe5e00e74de2fa5.png",
+    "static/media/portfolio1.png": "/static/media/portfolio1.d181eb64b7d194d91803.png",
+    "static/media/final.png": "/static/media/final.e43120d8e2dfecdaeeb0.png",
+    "static/media/me.jpg": "/static/media/me.16c0344767d9ba0c745e.jpg",
+    "static/media/ldpage1.png": "/static/media/ldpage1.fdf6b29b9f9ae96a69b3.png",
+    "static/media/cal.png": "/static/media/cal.a0a97eae80248309d06c.png",
+    "static/media/calculator1.png": "/static/media/calculator1.f6d9d08bb12a3fab5d61.png",
+    "static/media/game2.png": "/static/media/game2.dc9fdecbde4ae556976d.png",
+    "static/media/game1.png": "/static/media/game1.b4f418f1c53f8f1de145.png",
+    "static/media/textutil1.png": "/static/media/textutil1.93ba6ae76176b060198e.png",
+    "static/media/Shivam Bole Resume new.pdf": "/static/media/Shivam Bole Resume new.4f4abc7c6c2f6c5578b5.pdf",
+    "index.html": "/index.html",
+    "main.72ce1bc1.css.map": "/static/css/main.72ce1bc1.css.map",
+    "main.c0fd9f57.js.map": "/static/js/main.c0fd9f57.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72ce1bc1.css",
+    "static/js/main.c0fd9f57.js"
+  ]
+}
