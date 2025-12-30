@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* @tailwind base;
+=======
+@tailwind base;
+>>>>>>> 6d77287952ed76ed6cb77ad660cf97657c74eb44
 @tailwind components;
 @tailwind utilities;
 
@@ -68,6 +72,7 @@
   .section {
     @apply py-8 lg:py-24 lg:h-screen flex items-center;
   }
+<<<<<<< HEAD
 } */
 
 
@@ -218,4 +223,6 @@
   .section {
     @apply py-8 lg:py-24 lg:h-screen flex items-center;
   }
+=======
+>>>>>>> 6d77287952ed76ed6cb77ad660cf97657c74eb44
 }
