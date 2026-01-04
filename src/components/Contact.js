@@ -15,7 +15,7 @@ const Contact = () => {
   }, [state.succeeded]);
 
   return (
-    <section className="py-16 mb-20 lg:section" id="contact">
+    <section className="py-16 my-20 lg:section" id="contact">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
 
