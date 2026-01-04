@@ -10,9 +10,9 @@ const About = () => {
     threshold: 0.5,
   });
   return (
-    <section className="section" id="about" ref={ref}>
-      <div className="container mb-20">
-        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-[145vh] lg:h-screen">
+    <section className="section md:pt-28" id="about" ref={ref}>
+      <div className="container mb-20 pt-5 align-content-center">
+        <div className="flex flex-col gap-y-0 mt-5 lg:flex-row lg:gap-x-20 lg:gap-y-0 h-[145vh] md:h-screen">
           <motion.div
             variants={fadeIn("right", 0.2)}
             initial="hidden"

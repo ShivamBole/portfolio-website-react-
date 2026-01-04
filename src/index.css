@@ -161,5 +161,9 @@
     padding: 0 0 0 0 !important;
   }
 
+ .about{
+  align-items: center;
+ }
+
 
 }

@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.703df34a.css",
-    "main.js": "/static/js/main.8813daba.js",
+    "main.css": "/static/css/main.910cd9ab.css",
+    "main.js": "/static/js/main.17d48eed.js",
     "static/media/certificates.pdf": "/static/media/certificates.ab2f3a9cc34896a26b10.pdf",
     "static/media/jokes1.png": "/static/media/jokes1.96ec13aaf8c445d61509.png",
+    "static/media/me.png": "/static/media/me.b703c742c338c4313aef.png",
     "static/media/feane2.png": "/static/media/feane2.94990ea20ea3b1e2dd6e.png",
     "static/media/musera img.png": "/static/media/musera img.c4135308ba7b4a5cb745.png",
     "static/media/site-bg.jpg": "/static/media/site-bg.54724d703024833ef9c6.jpg",
@@ -22,13 +23,12 @@
     "static/media/game2.png": "/static/media/game2.dc9fdecbde4ae556976d.png",
     "static/media/game1.png": "/static/media/game1.b4f418f1c53f8f1de145.png",
     "static/media/textutil1.png": "/static/media/textutil1.93ba6ae76176b060198e.png",
-    "static/media/me.jpg": "/static/media/me.542ba709708926ff6ee5.jpg",
     "index.html": "/index.html",
-    "main.703df34a.css.map": "/static/css/main.703df34a.css.map",
-    "main.8813daba.js.map": "/static/js/main.8813daba.js.map"
+    "main.910cd9ab.css.map": "/static/css/main.910cd9ab.css.map",
+    "main.17d48eed.js.map": "/static/js/main.17d48eed.js.map"
   },
   "entrypoints": [
-    "static/css/main.703df34a.css",
-    "static/js/main.8813daba.js"
+    "static/css/main.910cd9ab.css",
+    "static/js/main.17d48eed.js"
   ]
 }
