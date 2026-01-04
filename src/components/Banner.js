@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../assets/me.jpg";
+import Image from "../assets/me.png";
 import { FaGithub, FaDribbble, FaLinkedin, FaFacebook,FaInstagram} from "react-icons/fa";
 import { BiLogoNetlify } from "react-icons/bi";
 import { TypeAnimation } from "react-type-animation";
@@ -89,13 +89,8 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className=" p-10 mx-3 border-r-20 lg:flex flex-1 max-w-[320px lg:max-w-[320px] min-w-[264px] ">
-            <img style={{transform: 'matrix3d(1.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)',
-    borderRadius: '7% 50%',
-    borderWidth: '5px',
-    filter: 'saturate(0.7)',
-    borderColor:' #ec4899',
-    boxShadow: '-10px 3px 1px 1px purple'}} src={Image} alt=" "></img> 
+              className=" mt-[-70px] mx-3 border-r-20 lg:flex flex-1 justify-items-center lg:max-w-[390px] min-w-[264px] ">
+            <img src={Image} alt="profile photo" className="lg:w-[100%] w-[60%]" ></img> 
           </motion.div>
         </div>
       </div>

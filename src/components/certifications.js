@@ -73,6 +73,7 @@ const Certifications = () => {
   };
 
   return (
+    
     <section id="certifications" className="section min-h-screen relative overflow-hidden mt-44 py-20">
       {/* Animated Background Gradient Orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

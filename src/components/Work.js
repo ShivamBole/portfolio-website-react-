@@ -54,10 +54,10 @@ const Work = () => {
               />
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-              <a href='https://musiera.netlify.app/' target="_blank"><span className="text-gradient">FRONT END</span></a>  
+              <a href='https://musiera.netlify.app/' target="_blank"><span className="md:text-2xl text-lg text-gradient">FRONT END</span></a>  
               </div>
               <div  className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-               <a href='https://musiera.netlify.app/' target="_blank"><span className="text-3xl text-white">MUSIERA (E-commerce Website )</span></a> 
+               <a href='https://musiera.netlify.app/' target="_blank"><span className="md:text-3xl text-xl text-white">MUSIERA (E-commerce Website )</span></a> 
               </div>
             </div>
           </motion.div>
@@ -89,10 +89,10 @@ const Work = () => {
               />
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-              <a href='https://github.com/ShivamBole/TextUtil.git' target="_blank"><span className="text-gradient">TEXT EDITOR WEBSITE</span></a>  
+              <a href='https://github.com/ShivamBole/TextUtil.git' target="_blank"><span className="md:text-2xl text-lg text-gradient">TEXT EDITOR WEBSITE</span></a>  
               </div>
               <div  className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-               <a href='https://github.com/ShivamBole/TextUtil.git' target="_blank"><span className="text-3xl text-white">TEXTUTIL</span></a> 
+               <a href='https://github.com/ShivamBole/TextUtil.git' target="_blank"><span className="md:text-3xl text-xl text-white">TEXTUTIL</span></a> 
               </div>
             </div>
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl flex">
@@ -113,10 +113,10 @@ const Work = () => {
               />
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-              <a href='https://github.com/ShivamBole/Pizzahat.git' target="_blank"><span className="text-gradient">FRONT END</span></a>  
+              <a href='https://github.com/ShivamBole/Pizzahat.git' target="_blank"><span className="text-gradient md:text-2xl text-lg">FRONT END</span></a>  
               </div>
               <div  className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-               <a href='https://github.com/ShivamBole/Pizzahat.git' target="_blank"><span className="text-3xl text-white">PIZZAHAT (E-commerce Website )</span></a> 
+               <a href='https://github.com/ShivamBole/Pizzahat.git' target="_blank"><span className="md:text-3xl text-xl text-white">PIZZAHAT (E-commerce Website )</span></a> 
               </div>
             </div>
         </motion.div>

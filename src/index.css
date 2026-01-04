@@ -147,3 +147,19 @@
     @apply py-8 lg:py-24 lg:h-screen flex items-center;
   }
 }
+
+@media (max-width: 480px) {
+  .h2 {
+    @apply text-xl;
+  }
+
+  h2{
+    margin-top: 5rem;
+  }
+  
+  section{
+    padding: 0 0 0 0 !important;
+  }
+
+
+}

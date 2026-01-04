@@ -12,14 +12,13 @@ const About = () => {
   return (
     <section className="section" id="about" ref={ref}>
       <div className="container mb-20">
-        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen">
+        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-[145vh] lg:h-screen">
           <motion.div
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.2 }}
-            className="flex-1 bg-services bg-no-repeat h-[640px] bg-contain bg-center lg:bg-top"
-           
+            className="flex-1 bg-services bg-no-repeat lg:max-w-[390px] min-w-[264px] bg-contain bg-center lg:bg-top"
           ></motion.div>
           <motion.div
             variants={fadeIn("left", 0.2)}

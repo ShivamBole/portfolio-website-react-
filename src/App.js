@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Projects from "./components/Projects";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Container from "./components/Container";
-import { motion } from "framer-motion";
 
 const App = () => {
   const [theme, setTheme] = useState("site"); // site | dark | white
@@ -39,6 +38,7 @@ const App = () => {
 
       `}
     >
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Container themeHandler={themeHandler} />} />
