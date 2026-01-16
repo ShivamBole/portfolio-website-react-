@@ -78,10 +78,10 @@ const Skill= () => {
 
     try {
       if (isUpdate) {
-        await axios.put(API_URL, formData);
+        await api.put(API_URL, formData);
         setMessage("Skills updated successfully ✅");
       } else {
-        await axios.post(API_URL, formData);
+        await api.post(API_URL, formData);
         setMessage("Skills created successfully ✅");
         setIsUpdate(true);
       }

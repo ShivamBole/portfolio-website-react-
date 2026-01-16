@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api , {API_BASE_URL} from "../../utils/api";
 
-const API_URL = "http://localhost:5000/about"; // backend endpoint
+const API_URL = `${API_BASE_URL}/about`; // backend endpoint
 
 const About = () => {
   const [formData, setFormData] = useState({
