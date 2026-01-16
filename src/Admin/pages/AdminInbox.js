@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { io } from "socket.io-client";
-
+import api , {API_BASE_URL} from "../../utils/api"
 // ✅ socket OUTSIDE component
-const socket = io("http://localhost:5000");
+const socket = io(API_BASE_URL);
 
 const AdminInbox = () => {
   const [users, setUsers] = useState([]);
@@ -37,29 +36,29 @@ const AdminInbox = () => {
   // ───────── APIs ─────────
 
   const fetchInbox = async () => {
-    const res = await axios.get(
-      "http://localhost:5000/api/chat/admin/inbox"
+    const res = await api.get(
+      "/api/chat/admin/inbox"
     );
     setUsers(res.data);
   };
 
   const fetchVisitors = async () => {
-    const res = await axios.get(
-      "http://localhost:5000/api/visitor"
+    const res = await api.get(
+      "/api/visitor"
     );
     setVisitors(res.data.filter(v => !v.hasChatted));
   };
 
   const fetchChats = async (userId) => {
-    const res = await axios.get(
-      `http://localhost:5000/api/chat/${userId}`
+    const res = await api.get(
+      `/api/chat/${userId}`
     );
     setMessages(res.data);
   };
 
   const markMessagesAsRead = async (userId) => {
-    await axios.put(
-      `http://localhost:5000/api/chat/read/${userId}`
+    await api.put(
+      `/api/chat/read/${userId}`
     );
 
     setUsers((prev) =>
@@ -73,8 +72,8 @@ const AdminInbox = () => {
   const deleteUser = async (userId) => {
     if (!window.confirm("Delete this user chat?")) return;
 
-    await axios.delete(
-      `http://localhost:5000/api/chat/delete/${userId}`
+    await api.delete(
+      `/api/chat/delete/${userId}`
     );
 
     setUsers(prev => prev.filter(u => u._id !== userId));
@@ -88,8 +87,8 @@ const AdminInbox = () => {
   const deleteVisitor = async (visitorId) => {
     if (!window.confirm("Delete this visitor?")) return;
 
-    await axios.delete(
-      `http://localhost:5000/api/visitor/delete/${visitorId}`
+    await api.delete(
+      `/api/visitor/delete/${visitorId}`
     );
 
     setVisitors(prev =>
@@ -112,8 +111,8 @@ const AdminInbox = () => {
       message: text
     };
 
-    await axios.post(
-      "http://localhost:5000/api/chat/send",
+    await api.post(
+      "/api/chat/send",
       msgData
     );
 
@@ -292,8 +291,9 @@ const AdminInbox = () => {
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Reply as admin..."
                 style={{ flex: 1 }}
+                className="text-black"
               />
-              <button onClick={sendAdminMessage}>Send</button>
+              <button onClick={sendAdminMessage} className="btn-sm mt-2">Send</button>
             </div>
           </>
         )}

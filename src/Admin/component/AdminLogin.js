@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import api from "../../utils/api";
 
 const AdminLogin = () => {
   const [password, setPassword] = useState("");
@@ -12,8 +13,8 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post(
-        "http://localhost:5000/admin/verify",
+      const res = await api.post(
+        "/admin/verify",
         { password }
       );
 

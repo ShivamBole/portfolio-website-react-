@@ -2,13 +2,7 @@ import React, { useState,useEffect } from "react";
 import { BrowserRouter,Link,Routes,Route } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import axios from "axios"
-import musera from '../assets/murera2.png'
-import musera1 from "../assets/musera img.png"
-import textutil1 from "../assets/textutil1.png"
-import textutil2 from "../assets/textutil2.png"
-import fine1 from "../assets/fiane1.png"
-import fine2 from "../assets/feane2.png"
+import api,{API_BASE_URL} from "../utils/api";
 
 const Work = () => {
 
@@ -22,7 +16,7 @@ const Work = () => {
   
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/projects");
+        const res = await api.get("/projects");
         setProjects(res.data || []);
       } catch (error) {
         console.error("Failed to fetch projects", error);

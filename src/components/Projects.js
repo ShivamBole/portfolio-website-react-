@@ -5,6 +5,7 @@ import { fadeIn } from "../variants";
 import axios from "axios";
 import { BiHomeAlt } from "react-icons/bi";
 import { IoSettings } from "react-icons/io5";
+import api from "../utils/api";
 function Projects({ themeHandler }) {
   const [open, setOpen] = useState(false);
   const [projects, setProjects] = useState([]);
@@ -16,7 +17,7 @@ function Projects({ themeHandler }) {
 
   const fetchProjects = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/projects");
+      const res = await api.get("/projects");
       setProjects(res.data || []);
     } catch (error) {
       console.error("Failed to fetch projects", error);
@@ -194,12 +195,12 @@ function Projects({ themeHandler }) {
                     />
                   </div>
                   <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                    <a href="https://musiera.netlify.app/" target="_blank">
+                    <a href={project.projectUrl} target="_blank">
                       <span className="text-gradient md:text-2xl text-lg">{project.title}</span>
                     </a>
                   </div>
                   <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                    <a href="https://musiera.netlify.app/" target="_blank">
+                    <a href={project.projectUrl} target="_blank">
                       <span className="md:text-3xl text-xl text-white">
                         {project.description}
                       </span>
@@ -242,12 +243,12 @@ function Projects({ themeHandler }) {
                     />
                   </div>
                   <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                    <a href="https://musiera.netlify.app/" target="_blank">
+                    <a href={project.projectUrl} target="_blank">
                       <span className="text-gradient md:text-2xl text-lg">{project.title}</span>
                     </a>
                   </div>
                   <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                    <a href="https://musiera.netlify.app/" target="_blank">
+                    <a href={project.projectUrl} target="_blank">
                       <span className="md:text-3xl text-xl text-white">
                         {project.description}
                       </span>
@@ -289,12 +290,12 @@ function Projects({ themeHandler }) {
                     />
                   </div>
                   <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                    <a href="https://musiera.netlify.app/" target="_blank">
+                    <a href={project.projectUrl} target="_blank">
                       <span className="text-gradient md:text-2xl text-lg">{project.title}</span>
                     </a>
                   </div>
                   <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                    <a href="https://musiera.netlify.app/" target="_blank">
+                    <a href={project.projectUrl} target="_blank">
                       <span className="md:text-3xl text-xl text-white">
                         {project.description}
                       </span>

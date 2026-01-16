@@ -1,9 +1,9 @@
 
 
 import React, { useState } from "react";
-import axios from "axios";
+import api , {API_BASE_URL} from "../../utils/api";
 
-const API_URL = "http://localhost:5000/api/banner"; // change if needed
+const API_URL = API_BASE_URL; // change if needed
 
 const Banner = () => {
   const [formData, setFormData] = useState({

@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "./api";
 import { getChatUserId } from "./chatUser";
 
 export const trackVisitor = async () => {
@@ -39,7 +39,7 @@ export const trackVisitor = async () => {
   }
 
   // 🔹 Send to backend
-  await axios.post("http://localhost:5000/api/visitor/track", {
+  await api.post("/api/visitor/track", {
     visitorId,
     browser,
     os,

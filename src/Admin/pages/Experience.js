@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-
+import api from "../../utils/api";
 function Experience() {
   const [formData, setFormData] = useState({
     role: "",
@@ -44,8 +44,8 @@ function Experience() {
     setMessage("");
 
     try {
-      const createExperiences = await axios.post(
-       "http://localhost:5000/experiences",
+      const createExperiences = await api.post(
+       "/experiences",
         data,
         {
           headers: {

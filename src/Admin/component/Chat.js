@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { getChatUserId } from "../../utils/chatUser";
 import { io } from "socket.io-client";
+import api , {API_BASE_URL} from "../../utils/api";
 
 // ✅ create socket OUTSIDE component (VERY IMPORTANT)
-const socket = io("http://localhost:5000");
+const socket = io(API_BASE_URL);
 
 const Chat = () => {
   const userId = getChatUserId();
@@ -45,8 +46,8 @@ const Chat = () => {
   // ✅ Fetch chat history
   const fetchChats = async () => {
     try {
-      const res = await axios.get(
-        `http://localhost:5000/api/chat/${userId}`
+      const res = await api.get(
+        `/api/chat/${userId}`
       );
       setMessages(res.data);
     } catch (err) {
@@ -66,8 +67,8 @@ const Chat = () => {
 
     try {
       // 1️⃣ save in database
-      await axios.post(
-        "http://localhost:5000/api/chat/send",
+      await api.post(
+        "/api/chat/send",
         msgData
       );
 
@@ -106,6 +107,7 @@ const Chat = () => {
           onChange={(e) => setText(e.target.value)}
           placeholder="Type message..."
           style={styles.input}
+          className="text-black"
         />
         <button className="btn-sm" onClick={sendMessage}>Send</button>
       </div>
