@@ -10,7 +10,7 @@ const About = () => {
     threshold: 0.5,
   });
   return (
-    <section className="section md:pt-28" id="about" ref={ref}>
+    <section className="section justify-center md:pt-28" id="about" ref={ref}>
       <div className="container mb-20 pt-5 align-content-center">
         <div className="flex flex-col gap-y-0 mt-5 lg:flex-row lg:gap-x-20 lg:gap-y-0 h-[145vh] md:h-screen">
           <motion.div

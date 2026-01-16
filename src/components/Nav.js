@@ -9,6 +9,7 @@ import { RiHomeOfficeLine } from "react-icons/ri";
 import { FaUserGraduate } from "react-icons/fa";
 import { PiCertificateDuotone } from "react-icons/pi";
 import { FaChess } from "react-icons/fa6";
+import AddProject from "../Admin/pages/AddProject";
 
 const Nav = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -202,8 +203,11 @@ const Nav = () => {
                       <div className="absolute -bottom-1 sm:-bottom-1.5 md:-bottom-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-white opacity-0 group-[.active]:opacity-100 transition-opacity duration-300"></div>
                     </div>
                   </Link>
+                  
                 );
               })}
+
+
             </div>
           </div>
 
@@ -220,6 +224,8 @@ const Nav = () => {
                 }`}
               />
             ))}
+
+            
           </div>
         </div>
       </div>

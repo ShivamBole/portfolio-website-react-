@@ -2,7 +2,7 @@
   command = "npm run build"
   publish = "build"
 
-# Redirect all routes to index.html (for React Router)
+# Handle React Router routes (SPA fallback)
 [[redirects]]
   from = "/*"
   to = "/index.html"

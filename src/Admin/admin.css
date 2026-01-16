@@ -1,0 +1,32 @@
+input {
+padding: 10px 5px;
+border-radius: 10px;
+margin: 5px 5px;
+}
+
+textarea {
+padding: 10px 5px;
+border-radius: 10px;
+}
+
+button{
+      background: linear-gradient(
+    92deg,
+    #8B0000 0%,
+    #C81D25 45%,
+    #1A1A1A 100%
+  );
+  box-shadow: 0 12px 45px rgba(200, 29, 37, 0.55);
+
+  border-radius: 10px;
+}
+
+button:hover{
+      background: linear-gradient(
+    92deg,
+    #1A1A1A 0%,
+    #C81D25 55%,
+    #8B0000 100%
+  );
+  box-shadow: 0 14px 55px rgba(200, 29, 37, 0.7);
+}
