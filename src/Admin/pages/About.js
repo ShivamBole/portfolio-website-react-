@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import api , {API_BASE_URL} from "../../utils/api";
-
+import axios from "axios";
 const API_URL = `${API_BASE_URL}/about`; // backend endpoint
 
 const About = () => {
@@ -33,10 +33,10 @@ const About = () => {
 
     try {
       if (isUpdate) {
-        await axios.put(API_URL, formData);
+        await api.put(API_URL, formData);
         setMessage("About section updated successfully ✅");
       } else {
-        await axios.post(API_URL, formData);
+        await api.post(API_URL, formData);
         setMessage("About section created successfully ✅");
         setIsUpdate(true);
       }

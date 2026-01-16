@@ -47,11 +47,6 @@ function Experience() {
       const createExperiences = await api.post(
        "/experiences",
         formData,
-        {
-          headers: {
-            Authorization: adminToken,
-          },
-        }
       );
 
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-
+import api from "../../utils/api";
 const AddProject = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
