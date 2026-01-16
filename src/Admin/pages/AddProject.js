@@ -52,8 +52,8 @@ const AddProject = () => {
     try {
       setLoading(true);
 
-      const res = await axios.post(
-        "http://localhost:5000/projects",
+      const res = await api.post(
+        "/projects",
         formData,
         {
           headers: {

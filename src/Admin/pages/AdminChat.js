@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { io } from "socket.io-client";
+import api from "../../utils/api";
 
 // socket OUTSIDE component
-const socket = io("http://localhost:5000");
+const socket = io(API_BASE_URL);
 
 const AdminChat = ({ selectedUserId }) => {
   const [messages, setMessages] = useState([]);
@@ -30,8 +31,8 @@ const AdminChat = ({ selectedUserId }) => {
   useEffect(() => {
     if (!selectedUserId) return;
 
-    axios
-      .get(`http://localhost:5000/api/chat/${selectedUserId}`)
+    api
+      .get(`/api/chat/${selectedUserId}`)
       .then((res) => setMessages(res.data));
   }, [selectedUserId]);
 
@@ -46,8 +47,8 @@ const AdminChat = ({ selectedUserId }) => {
     };
 
     // Save to DB
-    await axios.post(
-      "http://localhost:5000/api/chat/send",
+    await api.post(
+      "/api/chat/send",
       msgData
     );
 

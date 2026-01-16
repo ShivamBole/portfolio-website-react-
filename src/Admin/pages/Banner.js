@@ -51,11 +51,11 @@ const Banner = () => {
     try {
       if (isUpdate) {
         // UPDATE banner
-        await axios.put(API_URL, formData);
+        await api.put(API_URL, formData);
         setMessage("Banner updated successfully ✅");
       } else {
         // CREATE banner
-        await axios.post(API_URL, formData);
+        await api.post(API_URL, formData);
         setMessage("Banner created successfully ✅");
         setIsUpdate(true); // next submit becomes update
       }
