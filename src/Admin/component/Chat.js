@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { getChatUserId } from "../../utils/chatUser";
 import { io } from "socket.io-client";
 import api , {API_BASE_URL} from "../../utils/api";
