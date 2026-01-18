@@ -1,7 +1,7 @@
 import axios from 'axios';
 // const DEPLOYED='https://pear-poised-hen.cyclic.app/'
-// const LOCALHOST='http://localhost:5000'
-const LOCALHOST='https://portfolio-backend-evjw.onrender.com';
+const LOCALHOST='http://localhost:5000'
+// const LOCALHOST='https://portfolio-backend-evjw.onrender.com';
 
 export const API_BASE_URL = LOCALHOST;
 

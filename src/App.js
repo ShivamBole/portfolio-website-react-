@@ -17,14 +17,10 @@ import Skill from "./Admin/pages/Skill";
 import Dashboard from "./Admin/component/Dashboard";
 import AdminInbox from "./Admin/pages/AdminInbox";
 import { trackVisitor } from "./utils/trackVisitor";
-
-
-
 const App = () => {
 
   const [theme, setTheme] = useState("site");
   const [chatOpen, setChatOpen] = useState(false); // ✅ USER CHAT STATE
-
   const themeHandler = (selectedTheme) => {
     if (selectedTheme === "dark") setTheme("dark");
     else if (selectedTheme === "white") setTheme("white");
