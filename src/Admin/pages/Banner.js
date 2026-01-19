@@ -1,9 +1,7 @@
-
-
 import React, { useState } from "react";
-import api , {API_BASE_URL} from "../../utils/api";
+import api, { API_BASE_URL } from "../../utils/api";
 
-const API_URL = API_BASE_URL; // change if needed
+const API_URL = API_BASE_URL;
 
 const Banner = () => {
   const [formData, setFormData] = useState({
@@ -23,15 +21,12 @@ const Banner = () => {
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
-  const [isUpdate, setIsUpdate] = useState(false); 
-  // false = create, true = update
+  const [isUpdate, setIsUpdate] = useState(false);
 
-  // Handle normal inputs
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle social links
   const handleSocialChange = (e) => {
     setFormData({
       ...formData,
@@ -42,7 +37,6 @@ const Banner = () => {
     });
   };
 
-  // Submit (Create or Update)
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -50,116 +44,93 @@ const Banner = () => {
 
     try {
       if (isUpdate) {
-        // UPDATE banner
         await api.put(API_URL, formData);
         setMessage("Banner updated successfully ✅");
       } else {
-        // CREATE banner
         await api.post(API_URL, formData);
         setMessage("Banner created successfully ✅");
-        setIsUpdate(true); // next submit becomes update
+        setIsUpdate(true);
       }
     } catch (error) {
-      setMessage(
-        error.response?.data?.message || "Something went wrong ❌"
-      );
+      setMessage(error.response?.data?.message || "Something went wrong ❌");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div style={styles.container}>
-      <h2>Banner Details</h2>
+    <main style={styles.container}>
+      <h1>Banner Details</h1>
 
       <form onSubmit={handleSubmit} style={styles.form}>
-        <input
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+        <label>
+          Full Name
+          <input
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </label>
 
-        <input
-          name="role"
-          placeholder="Your Role"
-          value={formData.role}
-          onChange={handleChange}
-          required
-        />
+        <label>
+          Role / Title
+          <input
+            name="role"
+            placeholder="Your Role"
+            value={formData.role}
+            onChange={handleChange}
+            required
+          />
+        </label>
 
-        <textarea
-          name="shortDescription"
-          placeholder="Short Description"
-          rows={3}
-          value={formData.shortDescription}
-          onChange={handleChange}
-          required
-        />
+        <label>
+          Short Description
+          <textarea
+            name="shortDescription"
+            rows={3}
+            value={formData.shortDescription}
+            onChange={handleChange}
+            required
+          />
+        </label>
 
-        <input
-          name="resumeLink"
-          placeholder="Resume Link"
-          value={formData.resumeLink}
-          onChange={handleChange}
-        />
+        <label>
+          Resume Link
+          <input
+            name="resumeLink"
+            placeholder="Resume Link"
+            value={formData.resumeLink}
+            onChange={handleChange}
+          />
+        </label>
 
-        <input
-          name="profileImage"
-          placeholder="Profile Image URL"
-          value={formData.profileImage}
-          onChange={handleChange}
-        />
+        <label>
+          Profile Image URL
+          <input
+            name="profileImage"
+            placeholder="Profile Image URL"
+            value={formData.profileImage}
+            onChange={handleChange}
+          />
+        </label>
 
-        <h4>Social Links</h4>
+        <h2>Social Links</h2>
 
-        <input
-          name="linkedin"
-          placeholder="LinkedIn"
-          value={formData.socialLinks.linkedin}
-          onChange={handleSocialChange}
-        />
-
-        <input
-          name="github"
-          placeholder="GitHub"
-          value={formData.socialLinks.github}
-          onChange={handleSocialChange}
-        />
-
-        <input
-          name="instagram"
-          placeholder="Instagram"
-          value={formData.socialLinks.instagram}
-          onChange={handleSocialChange}
-        />
-
-        <input
-          name="twitter"
-          placeholder="Twitter"
-          value={formData.socialLinks.twitter}
-          onChange={handleSocialChange}
-        />
-
-        <input
-          name="email"
-          placeholder="Email"
-          value={formData.socialLinks.email}
-          onChange={handleSocialChange}
-        />
+        <input name="linkedin" placeholder="LinkedIn" value={formData.socialLinks.linkedin} onChange={handleSocialChange} />
+        <input name="github" placeholder="GitHub" value={formData.socialLinks.github} onChange={handleSocialChange} />
+        <input name="instagram" placeholder="Instagram" value={formData.socialLinks.instagram} onChange={handleSocialChange} />
+        <input name="twitter" placeholder="Twitter" value={formData.socialLinks.twitter} onChange={handleSocialChange} />
+        <input name="email" placeholder="Email" value={formData.socialLinks.email} onChange={handleSocialChange} />
 
         <button type="submit" disabled={loading}>
-          {loading
-            ? "Saving..."
-            : isUpdate
-            ? "Update Banner"
-            : "Create Banner"}
+          {loading ? "Saving..." : isUpdate ? "Update Banner" : "Create Banner"}
         </button>
 
         {message && <p>{message}</p>}
       </form>
-    </div>
+    </main>
   );
 };
 
@@ -176,8 +147,6 @@ const styles = {
     flexDirection: "column",
     gap: "12px",
   },
-
-  
 };
 
 export default Banner;

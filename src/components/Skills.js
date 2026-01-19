@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const skills = [
   {
-    title: "Frontend",
+    title: "Frontend Development",
     items: [
       "HTML5",
       "CSS3",
@@ -15,7 +15,7 @@ const skills = [
     ],
   },
   {
-    title: "Backend",
+    title: "Backend Development",
     items: [
       "Node.js",
       "Express.js",
@@ -24,7 +24,7 @@ const skills = [
     ],
   },
   {
-    title: "Database",
+    title: "Database Technologies",
     items: ["MongoDB", "Mongoose", "SQL (Basic)"],
   },
   {
@@ -59,7 +59,11 @@ const cardVariants = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20">
+    <section
+      id="skills"
+      className="py-20"
+      aria-labelledby="skills-heading"
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -69,10 +73,16 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <h2 className="h2 text-marsBlue">Skills & Tech Stack.</h2>
+          {/* ✅ H2 stays same visually */}
+          <h2 id="skills-heading" className="h2 text-marsBlue">
+            Skills & Tech Stack
+          </h2>
+
+          {/* ✅ SEO-rich description (no design change) */}
           <p className="mt-4 max-w-xl mx-auto">
-            Technologies and tools I use to build scalable, high-performance web
-            applications.
+            Technologies and tools used by <strong>Shivam Bole</strong>, a MERN
+            Stack Full Stack Web Developer, to build scalable and
+            high-performance web applications.
           </p>
         </motion.div>
 
@@ -89,27 +99,34 @@ const Skills = () => {
               key={index}
               variants={cardVariants}
               whileHover={{ y: -10, scale: 1.04 }}
-              className="group relative rounded-xl p-6 
-               backdrop-blur-lg 
-              border border-white 
-              shadow-md transition-all duration-300"
+              className="group relative rounded-xl p-6
+               backdrop-blur-lg
+               border border-white
+               shadow-md transition-all duration-300"
             >
               {/* Glow Layer */}
               <div
-                className="pointer-events-none absolute inset-0 rounded-xl 
-                bg-gradient-to-br from-pink-500/70 via-transparent to-blue-700/70 
-                opacity-0 group-hover:opacity-100 
+                className="pointer-events-none absolute inset-0 rounded-xl
+                bg-gradient-to-br from-pink-500/70 via-transparent to-blue-700/70
+                opacity-0 group-hover:opacity-100
                 transition-opacity duration-300"
               />
 
+              {/* ✅ H3 semantic */}
               <h3 className="text-lg font-semibold text-marsBlue mb-5 relative z-10">
                 {skill.title}
               </h3>
 
-              <ul className="space-y-3 relative z-10">
+              <ul
+                className="space-y-3 relative z-10"
+                aria-label={`${skill.title} skills`}
+              >
                 {skill.items.map((item, i) => (
                   <li key={i} className="text-sm flex items-center">
-                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3" />
+                    <span
+                      className="w-2 h-2 bg-red-500 rounded-full mr-3"
+                      aria-hidden="true"
+                    />
                     {item}
                   </li>
                 ))}

@@ -1,40 +1,39 @@
-
 import React from "react";
 import { motion } from "framer-motion";
-import servicesImg from "../assets/final.png"; // 👈 use your image
+import servicesImg from "../assets/final.png";
 
 const services = [
   {
-    title: "Full-Stack Web Application Development",
-    desc: "End-to-end MERN stack applications built with scalable architecture and clean code practices.",
+    title: "Full Stack MERN Web Application Development",
+    desc: "End-to-end web applications built by a full stack MERN developer using MongoDB, Express.js, React.js, and Node.js with scalable architecture and clean code practices.",
   },
   {
-    title: "Responsive Frontend Development (React.js)",
-    desc: "Modern, responsive, and user-friendly interfaces using React.js and Tailwind CSS.",
+    title: "Frontend Web Development with React.js",
+    desc: "Responsive, high-performance frontend interfaces developed by a professional web developer using React.js and Tailwind CSS.",
   },
   {
-    title: "Backend API Development (Node.js & Express.js)",
-    desc: "Secure and efficient RESTful APIs with proper validation, error handling, and scalability.",
+    title: "Backend Development & REST API Services",
+    desc: "Secure and scalable backend APIs built with Node.js and Express.js, including validation, authentication, and database integration.",
   },
   {
-    title: "Authentication & Authorization",
-    desc: "JWT-based authentication and Google OAuth integration for secure user access.",
+    title: "Authentication & Authorization Solutions",
+    desc: "JWT-based authentication and Google OAuth integration for secure and reliable user access in web applications.",
   },
   {
-    title: "eCommerce Development & Payment Integration",
-    desc: "Complete eCommerce solutions including cart, checkout, and payment gateway integration.",
+    title: "eCommerce Website Development (MERN Stack)",
+    desc: "Complete eCommerce web development solutions including product management, cart, checkout, and payment gateway integration.",
   },
   {
     title: "Admin Dashboards & Management Systems",
-    desc: "Role-based dashboards for managing users, products, orders, and analytics.",
+    desc: "Custom admin dashboards developed by a full stack MERN developer for managing users, products, orders, and analytics.",
   },
   {
-    title: "REST API & Third-Party Integrations",
-    desc: "Integration of third-party services, APIs, and external tools into applications.",
+    title: "Third-Party API & Service Integration",
+    desc: "Integration of external APIs, payment gateways, and third-party services into modern web applications.",
   },
   {
-    title: "Website Optimization, Bug Fixes & Deployment",
-    desc: "Performance optimization, bug fixing, and deployment on Netlify, Vercel, or cloud platforms.",
+    title: "Website Optimization, Bug Fixing & Deployment",
+    desc: "Performance optimization, bug fixing, and deployment on Vercel, Netlify, and cloud platforms by an experienced web developer.",
   },
 ];
 
@@ -64,7 +63,11 @@ const cardVariants = {
 
 const Services = () => {
   return (
-    <section id="services" className="py-20">
+    <section
+      id="services"
+      className="py-20"
+      aria-labelledby="services-heading"
+    >
       <div className="container mx-auto px-4">
 
         {/* Section Header */}
@@ -75,10 +78,14 @@ const Services = () => {
           viewport={{ once: false }}
           className="text-center mb-16"
         >
-          <h2 className="h2 text-marsBlue">Services & Core Expertise</h2>
-          <p className="mt-4 max-w-xl mx-auto ">
-            Practical, production-ready solutions focused on performance,
-            scalability, and business needs.
+          <h2 id="services-heading" className="h2 text-marsBlue">
+            Web Developer & Full Stack MERN Services
+          </h2>
+
+          <p className="mt-4 max-w-xl mx-auto">
+            Professional web development services offered by me,
+            a full stack MERN developer focused on performance, scalability,
+            and real-world business solutions.
           </p>
         </motion.div>
 
@@ -102,10 +109,8 @@ const Services = () => {
                   scale: 1.03,
                   transition: { type: "spring", stiffness: 200 },
                 }}
-                className=" border border-white  bg-gradient-to-br from-pink-500/70 via-transparent to-blue-700/70 
-                opacity-0 group-hover:opacity-100 
-               rounded-2xl p-6 shadow-md
-                hover:shadow-xl transition-shadow duration-300"
+                className="border border-white bg-gradient-to-br from-pink-500/70 via-transparent to-blue-700/70 
+                rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="w-12 h-1 bg-red-500 mb-4 rounded-full"></div>
 
@@ -130,8 +135,9 @@ const Services = () => {
           >
             <img
               src={servicesImg}
-              alt="Services Illustration"
+              alt="Web Developer and Full Stack MERN Developer Services by Shivam Bole"
               className="max-w-[480px] w-full object-contain"
+              loading="lazy"
             />
           </motion.div>
 
