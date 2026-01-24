@@ -49,11 +49,11 @@ const Work = () => {
               <h2 id="work-heading" className="h2 leading-tight text-marsBlue">
                 Projects by
                 <br />
-                me
+                <strong>Shivam Bole</strong>
               </h2>
 
               <p className="max-w-sm mb-16">
-                Selected <strong>web development</strong> projects created by me,
+                Selected <strong>web development</strong> projects created by Shivam,
                 a <strong>MERN Stack Full Stack Web Developer</strong>, using React, Tailwind CSS,
                 REST APIs, and modern frontend technologies.
               </p>
