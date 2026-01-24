@@ -2,7 +2,7 @@ import axios from "axios";
 
 // ✅ Use /api if your backend routes are like /api/projects
 // const LOCALHOST = "http://localhost:5000";
-const LOCALHOST = "https://portfolio-backend-evjw.onrender.com/api";
+const LOCALHOST = "https://portfolio-backend-evjw.onrender.com";
 
 export const API_BASE_URL = LOCALHOST;
 
